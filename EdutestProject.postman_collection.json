@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "16f1127e-c76f-40cd-babe-55de7f71a36a",
+		"name": "Abhishek Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Menu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"About us\",\n    \"url\": \"/about\",\n    \"isLinked\": false,\n    \"subMenuIdList\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/menu/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"menu",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Menu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 5,\n    \"name\": \"Javascript\",\n    \"url\": \"/js\",\n    \"isLinked\": false,\n    \"subMenuIdList\": [\n        {\n            \"id\": 6\n        },\n        {\n            \"id\" : 7\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/menu/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"menu",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/menu/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"menu",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
